@@ -1,23 +1,15 @@
-import 'person.dart';
+// lib/main.dart
+import 'school.dart';
 
 void main() {
-  // Create a Person object
-  Person p1 = Person("Jay", 16, "Male");
+  School student1 = School("Jay", "Computer Science", 2);
 
-  // Show introduction
-  p1.introduce();
+  student1.displayInfo();
 
-  // Change name with setter (valid)
-  p1.name = "Jay Villa";
-  print("Updated name: ${p1.name}");
+  student1.promote(); // Jay moves to year 3
+  student1.changeDepartment("School of Engineering");
 
-  // Try invalid age (validation should reject it)
-  p1.age = -5; // Invalid
-  print("Current age after invalid set: ${p1.age}");
+  student1.demote(); // Jay goes back to year 1
 
-  // Celebrate birthday (method changes the attribute)
-  p1.celebrateBirthday();
-
-  // Another introduction after changes
-  p1.introduce();
+  student1.displayInfo();
 }
