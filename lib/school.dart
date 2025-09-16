@@ -1,5 +1,3 @@
-// lib/school.dart
-
 class School {
   // Private attributes
   String _name;
