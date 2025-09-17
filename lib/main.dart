@@ -1,10 +1,11 @@
-// lib/main.dart
 import 'school.dart';
-import 'plants.dart'; // 👈 import your derived class
+import 'plants.dart';
+import 'animals.dart';
 
 void main() {
   // --- School Demo ---
-  School student1 = School("Jay", "Computer Science", 2);
+  print("=== School Demo ===");
+  School student1 = School("Jay", "Computer Studies", 2);
 
   student1.displayInfo();
 
@@ -16,10 +17,27 @@ void main() {
   student1.displayInfo();
 
   // --- Plants Demo ---
-  print("\n--- Plants Demo ---");
+  print("\n=== Plants Demo ===");
   Plants plant1 = Plants("Mango Tree", 3, "Fruit Tree", 120.0);
 
   plant1.displayInfo();
+
   plant1.grow(5.0); // grows by 5 cm
+  plant1.ageOneYear(); // plant gets older
   plant1.displayInfo();
+// --- Animals Demo ---
+print("\n=== Animals Demo ===");
+Animals animal1 = Animals("Aspin", "Dog", 4, 18.5);
+
+animal1.displayInfo();
+
+// Show the breed using the getter
+print("Breed: ${animal1.breed}");
+
+
+// Feed and age
+animal1.feed(2.0); // feed the animal
+animal1.ageOneYear(); // animal gets older
+animal1.displayInfo();
+
 }
